@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title> Mount Olympus Skiing </title>
+        <meta charset = "utf-8">
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<link rel="icon" type="image/jpg" href="icon.jpg">
+    </head>
+    <body>
+        <div id="wrapper">
+            <header>
+                <h1> Mount Olympus Skiing</h1>
+            </header>
+            <nav>
+                <ul class="navigation">
+                    <li> <a href="mountain.html" onmouseover="OpenMenu('msubmenu')"> The Mountain </a>
+						<ul id="msubmenu" onmouseover="KeepSubMenu()" onmouseout="CloseMenu()">
+							<li><a href="history.html">History</a></li>
+						</ul>
+					</li>
+                    <li> <a href="tickets.html" onmouseover="OpenMenu('tsubmenu')"> Ticket Pricing </a>
+						<ul id="tsubmenu" onmouseover="KeepSubMenu()" onmouseout="CloseMenu()">
+							<li><a href="rent.html">Rentals</a></li>
+						</ul>
+					</li>
+                    <li> <a href="contact.html" onmouseover="CloseMenu()"> Contact Page </a></li>
+                    <li> <a href="schedule.html" onmouseover="CloseMenu()"> Schedule </a> </li>
+                </ul>
+            </nav>
+            <div id="content">
+                <div id="left">
+                    <div id="mountainpicture"></div>
+		</div>
+		<div id ="right">
+                    <p style = "text-align: center; margin-right: 1.8em; margin-top: 3em;">
+                        Welcome to <strong>Olympic Ski Resort!</strong> Here you will find that we have the best location, enriched with enticing history in Greek and Roman mythology. There is snow here year long, some say it is a gift from the gods, with dozens of trails to provide hours of enjoyment for skiers of all skill levels.<br><br>For those who wish to stay here longer, you may rent one of the wonderful rooms at our resort hotel. If you want to stay up to date on all your Olympus Skiing news, make sure to sign up for our newsletter located on our <a href = "contact.html">Contacts Page</a>!
+                    </p>
+                </div>
+            </div>
+            <footer>
+                @ Warren and Jordan
+            </footer>	
+       </div>
+	   		<script>
+			
+		
+	var Item; //Hold current open menu item
+	var Timer;	//Hold timeout value
+	document.onclick = CloseMenu; //Hide the menu after clicking outside it
+	
+	function OpenMenu(Menu)
+	{
+		//if open, close it
+		if(Item)
+		{
+			Item.style.visibility="hidden";
+		}
+		//setup new menu item
+		Item=document.getElementById(Menu);
+		Item.style.visibility="visible";
+	}
+	
+	function CloseMenu()
+	{
+		//setup a timer to close menu
+		Timer = window.setTimeout(PerformClose, 500);
+	}
+	
+	function PerformClose()
+	{
+		if(Item)
+		{
+			Item.style.visibility="hidden";
+		}
+	}
+	
+	function KeepSubmenu()
+	{
+	//reset the timer
+		window.clearTimeout(Timer);
+	}
+	</script>
+	   
+	    </body>		
+</html>

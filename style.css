@@ -1,0 +1,104 @@
+html, body{ background: linear-gradient(to bottom, #CCFFFF, #99CCFF); height:100%; width:100%; margin:0px auto; background-repeat:no-repeat;
+}
+#wrapper{ height:100%; width: 90%; margin: auto;
+}
+header{ text-align:center;
+}
+
+#content, #m-content{ height:25em; width: 79%; margin:auto; border: 1px solid black; box-shadow: 5px 5px 5px #000033; background:linear-gradient(#99FFFF, #0099FF);
+}
+#left, #map-left {width:45%; height: 23em; float: left; margin: 1%;
+}
+#mountainpicture{height:100%; width:100%; background-image: url(mountain.jpg); background-repeat: no-repeat; background-size: cover;
+}
+#ticketpicture {height:100%; width:100%; background-image: url(ticket.jpg); background-repeat: no-repeat; background-size:cover;
+}
+#schedulepicture{height:100%; width:100%; background-image: url(calender.jpg); background-repeat: no-repeat; background-size:100%;
+}
+#gearpicture{height:100%; width:100%; background-image:url(gear.jpg); background-repeat:no-repeat; background-size:cover;
+}
+#slope-map{height:100%; width:100%; background-image: url(slopes.jpg); background-repeat: no-repeat; background-size:cover;
+}
+#right{width: 48%; border-left: 1px solid black; padding-left: 4%; float: right; margin:auto; height: 100%;
+}
+nav{/*float:left;*/ height: 8em; width:100%;
+}
+
+#map-canvas{width: 100%; height: 100%;}
+
+
+.navigation {padding:2em; display:flex; flex-direction: row; height: 90%;
+}
+
+.navigation ul{height: 21em;}
+
+.navigation li { display:block; margin:.3em; flex-grow:1; height: 2em; width: 100%; font-size: 120%; text-align: center; padding:.5em; border-radius:1em; background: linear-gradient(to right, blue, skyblue); 
+}
+.navigation li:hover{  background: linear-gradient(to left, blue, skyblue);
+}
+.navigation a { display:block; height:100%; width:100%; text-decoration:none; color:white;
+}
+#inlink{display:block; margin:1em; height:2em; text-align:center; padding:.5em; border-radius:1em; background:linear-gradient(to right, blue, skyblue);
+}
+#inlink a{display:block; height:100%; width:100%; text-decoration:none; color:white;
+}
+footer{ margin: auto; margin-top:1em; height: auto; width: 100%; float: left; text-align: right;
+}
+
+
+.contact-navigation {padding:2em; display:flex; flex-direction: row; height: 90%;
+}
+
+.contact-navigation ul{height: 21em;}
+
+.contact-navigation li { display:block; margin:.3em; flex-grow:1; height: 2em; width: 100%; font-size: 120%; text-align: center; padding:.5em; border-radius:1em; background: linear-gradient(to right, blue, skyblue); 
+}
+.contact-navigation li:hover{  background: linear-gradient(to left, blue, skyblue);
+}
+.contact-navigation a { display:block; height:100%; width:100%; text-decoration:none; color:white;
+}
+.contact-navigation #msubmenu, #tsubmenu{display: none;}
+
+#historyh3{text-align:center; font-size:200%
+}
+#historyp{font-size:150%; padding:.5em;
+}
+
+@media only screen and (max-width: 768px){
+
+
+
+#content{ width:100%;
+}
+#msubmenu, #tsubmenu { display:none;
+}
+
+
+}
+
+@media only screen and (max-width: 480px) {
+html body{ height:auto;
+}
+body {margin: 0;
+}
+    
+nav{height:15em;
+}
+.navigation, .contact-navigation{ flex-direction:column; height:12em;
+}
+#content{float:none; width:100%; border:none; box-shadow:none; background:none;
+}
+#m-content{float:none; width:100%; border:none; box-shadow:none; background:none; height:40em;
+}
+#left{float:none; display:none;
+}
+#map-left{float:none;width:100%;
+}
+#right{float:none; width:100%; border-top: 1px solid black; border-left:none;
+}
+#msubmenu, #tsubmenu { display:none;
+}
+#historyp{font-size:100%;
+}
+footer{float:none;}
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title> Mount Olympus Skiing </title>
+        <meta charset = "utf-8">
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<link rel="icon" type="image/jpg" href="icon.jpg">
+    </head>
+    <body>
+        <div id="wrapper">
+            <header>
+                <h1> Rent Our Gear </h1>
+            </header>
+            <nav>
+                <ul class="navigation">
+                    <li> <a href="mountain.html" onmouseover="OpenMenu('msubmenu')"> The Mountain </a>
+						<ul id="msubmenu" onmouseover="KeepSubMenu()" onmouseout="CloseMenu()">
+                            <li><a href="history.html"> History </a></li>
+						</ul>
+					</li>
+                    <li> <a href="index.html" onmouseover="OpenMenu('ticketlinksubmenu')"> Home </a></li>
+                    <li> <a href="contact.html" onmouseover="CloseMenu()"> Contact Page </a></li>
+                    <li> <a href="schedule.html" onmouseover="CloseMenu()"> Schedule </a> </li>
+                </ul>
+            </nav>
+            <div id="content">
+                <div id="left">
+                    <div id="gearpicture"></div>
+		</div>
+		<div id ="right">
+                    <h2> Rental Prices: </h2> 
+					<h3>Skis and Snowboards</h3>
+					<p> Ski/Snowboard rental : $90 per day</p>  
+					<h3> Other Gear Prices </h3>
+					<p> Boots: $20 per day <br> Jacket: $15 Per day <br> Helmet: $25 per day</p>
+                </div>
+            </div>
+            <footer>
+                @ Warren and Jordan
+            </footer>	
+       </div>
+        <script>
+	var Item; //Hold current open menu item
+	var Timer;	//Hold timeout value
+	document.onclick=CloseMenu(); //Hide the menu after clicking outside it
+    document.onload=CloseMenu();
+	function OpenMenu(Menu)
+	{
+		//if open, close it
+		if(Item)
+		{
+			Item.style.visibility="hidden";
+		}
+		//setup new menu item
+		Item=document.getElementById(Menu);
+		Item.style.visibility="visible";
+	}
+	
+	function CloseMenu()
+	{
+		//setup a timer to close menu
+		Timer = window.setTimeout(PerformClose, 500);
+	}
+	
+	function PerformClose()
+	{
+		if(Item)
+		{
+			Item.style.visibility="hidden";
+		}
+	}
+	
+	function KeepSubmenu()
+	{
+	//reset the timer
+		window.clearTimeout(Timer);
+	}
+	</script>
+    </body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title> Mount Olympus Skiing </title>
+        <meta charset = "utf-8">
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<link rel="icon" type="image/jpg" href="icon.jpg">
+    </head>
+    <body>
+        <div id="wrapper">
+            <header>
+                <h1> Tickets </h1>
+            </header>
+            <nav>
+                <ul class="navigation">
+                    <li> <a href="mountain.html" onmouseover="OpenMenu('msubmenu')"> The Mountain </a>
+						<ul id="msubmenu" onmouseover="KeepSubMenu()" onmouseout="CloseMenu()">
+                            <li><a href="history.html"> History </a></li>
+						</ul>
+					</li>
+                    <li> <a href="index.html" onmouseover="OpenMenu('ticketlinksubmenu')"> Home </a>
+                    <li> <a href="contact.html" onmouseover="CloseMenu()"> Contact Page </a></li>
+                    <li> <a href="schedule.html" onmouseover="CloseMenu()"> Schedule </a> </li>
+                </ul>
+            </nav>
+            <div id="content">
+                <div id="left">
+                    <div id="ticketpicture"></div>
+		</div>
+		<div id ="right">
+			<h2> Ticket Prices: </h2> 
+				<table border="1">
+					<caption>Lift Tickets</caption>
+					<tr>
+					<td> One day pass </td> <td> $100 </td>
+					</tr>
+					<tr>
+					<td> Weeklong Pass </td> <td> $500 </td>
+					</tr> 
+					<tr>
+					<td>Season Pass </td> <td> $2,000 </td>
+					<tr>
+				</table>
+				<br>
+				<table border= "1">
+					<caption>Resort prices</caption>
+					<tr>
+					<td>One double bed </td><td> $300 per night </td>
+					</tr>
+					<tr>
+					<td>Two double beds</td><td> $350 per night </td>
+					</tr>
+				</table>
+                       <div id="inlink"><a href="rent.html"> Rental Gear </a></div>
+                </div>
+            </div>
+            <footer>
+                @ Warren and Jordan
+            </footer>	
+       </div>
+        <script>
+	var Item; //Hold current open menu item
+	var Timer;	//Hold timeout value
+	document.onclick=CloseMenu(); //Hide the menu after clicking outside it
+    document.onload=CloseMenu();
+	function OpenMenu(Menu)
+	{
+		//if open, close it
+		if(Item)
+		{
+			Item.style.visibility="hidden";
+		}
+		//setup new menu item
+		Item=document.getElementById(Menu);
+		Item.style.visibility="visible";
+	}
+	
+	function CloseMenu()
+	{
+		//setup a timer to close menu
+		Timer = window.setTimeout(PerformClose, 500);
+	}
+	
+	function PerformClose()
+	{
+		if(Item)
+		{
+			Item.style.visibility="hidden";
+		}
+	}
+	
+	function KeepSubmenu()
+	{
+	//reset the timer
+		window.clearTimeout(Timer);
+	}
+	</script>
+    </body>
+</html>
