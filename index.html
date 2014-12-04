@@ -3,6 +3,7 @@
     <head>
         <title> Mount Olympus Skiing </title>
         <meta charset = "utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="style.css" type="text/css">
 	<link rel="icon" type="image/jpg" href="icon.jpg">
     </head>
@@ -46,7 +47,7 @@
 		
 	var Item; //Hold current open menu item
 	var Timer;	//Hold timeout value
-	document.onclick = CloseMenu; //Hide the menu after clicking outside it
+	document.onclick = CloseMenu(); //Hide the menu after clicking outside it
 	
 	function OpenMenu(Menu)
 	{
@@ -74,7 +75,7 @@
 		}
 	}
 	
-	function KeepSubmenu()
+	function KeepSubMenu()
 	{
 	//reset the timer
 		window.clearTimeout(Timer);
